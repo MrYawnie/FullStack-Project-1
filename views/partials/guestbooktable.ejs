@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover" id="guestbooktable">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Country</th>
+        <th>Date</th>
+        <th>Message</th>
+    </tr>
+    <% guestbookData.forEach(function(entry) { %>
+        <tr>
+            <td><%= entry.id %></td>
+            <td><%= entry.username %></td>
+            <td><%= entry.country %></td>
+            <td><%= new Date(entry.date).toDateString() %></td>
+            <td><%= entry.message %></td>
+        </tr>
+    <% }) %>
+</table>
