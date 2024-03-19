@@ -4,7 +4,8 @@ const router = express.Router();
 const path = require('path');
 
 router.get("/", (req, res) => {
-    res.render("pages/newmessage", { active: { newmessage: true } });
+    let formParameters = `action=/newmessage method=post`;
+    res.render("pages/newmessage", { active: { newmessage: true }, formParameters: formParameters });
 });
 
 router.post("/", (req, res) => {

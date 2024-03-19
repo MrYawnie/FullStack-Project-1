@@ -1,13 +1,8 @@
 <%- include('../partials/header') %> <!-- Include navbar partial -->
 
     <div class="container">
-        <h1>Add guestbook entry</h1>
-        <form method="post" action="/newmessage">
-            Username <input type="text" name="username" value="" required>
-            Country <input type="text" name="country" value="" required>
-            Message <input type="text" name="message" value="" required>
-            <input type="submit" value="Submit">
-        </form>
+        <h1 class="d-flex justify-content-center mb-3">Add guestbook entry</h1>
+        <%- include('../partials/form') %>
     </div>
 
     <%- include('../partials/footer') %>

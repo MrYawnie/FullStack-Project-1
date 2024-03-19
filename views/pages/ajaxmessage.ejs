@@ -2,12 +2,7 @@
 
     <div class="container">
         <h1>Add guestbook entry (AJAX)</h1>
-        <form id="ajaxForm">
-            Username <input type="text" name="username" required>
-            Country <input type="text" name="country" required>
-            Message <input type="text" name="message" required>
-            <input type="button" value="Submit" id="submitAjax">
-        </form>
+        <%- include('../partials/form') %>
 
         <%- include('../partials/guestbooktable') %>
     </div>
@@ -19,11 +14,12 @@
             table.innerHTML += `<tr><td>${item.id}</td><td>${item.username}</td><td>${item.country}</td><td>${date.toLocaleString("fi-FI")}</td><td>${item.message}</td></tr>`;
         }
 
-        document.getElementById("submitAjax").addEventListener("click", function () {
+        document.getElementById("submitBtn").addEventListener("click", function (event) {
+            event.preventDefault();
             const formData = {
                 username: document.querySelector('input[name="username"]').value,
-                country: document.querySelector('input[name="country"]').value,
-                message: document.querySelector('input[name="message"]').value,
+                country: document.querySelector('select[name="country"]').value,
+                message: document.querySelector('textarea[name="message"]').value,
             };
 
             fetch("/ajaxmessage", {
@@ -40,7 +36,8 @@
                 })
                 .then(() => {
                     // Clear the form
-                    document.getElementById("ajaxForm").reset();
+                    let form = document.querySelector("form");
+                    form.reset();
                 })
                 .catch(error => console.error("Error:", error));
         });

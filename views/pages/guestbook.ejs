@@ -1,11 +1,15 @@
 <%- include('../partials/header') %> <!-- Include navbar partial -->
 
     <div class="container">
-        <h1>Guestbook Entries</h1>
-        <button onclick="location.href='/newmessage'">Add New Message</button>
-        <button onclick="location.href='/ajaxmessage'">Add New Ajax Message</button>
+        <div class="title-area">
+            <h1 class="d-flex justify-content-center">Guestbook Entries</h1>
+            <div class="buttons d-flex justify-content-center">
+                <button class="btn btn-secondary m-2" onclick="location.href='/newmessage'">Add New Message</button>
+                <button class="btn btn-secondary m-2" onclick="location.href='/ajaxmessage'">Add New Ajax Message</button>
+            </div>
+        </div>
 
         <%- include('../partials/guestbooktable') %>
     </div>
-    
-<%- include('../partials/footer') %>
+
+    <%- include('../partials/footer') %>

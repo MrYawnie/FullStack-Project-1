@@ -16,8 +16,9 @@ router.get("/", (req, res) => {
         }
     
         let guestbookData = JSON.parse(data);
+        let formParameters = ``;
     
-        res.render("pages/ajaxmessage", { guestbookData, active: { ajaxmessage: true } });
+        res.render("pages/ajaxmessage", { guestbookData, active: { ajaxmessage: true }, formParameters: formParameters});
       });
 });
 
