@@ -4,7 +4,7 @@ const router = express.Router();
 const path = require('path');
 
 router.get("/", (req, res) => {
-    let formParameters = `action=/newmessage method=post`;
+    let formParameters = `action="/newmessage method=post`;
     res.render("pages/newmessage", { active: { newmessage: true }, formParameters: formParameters });
 });
 
@@ -36,10 +36,9 @@ router.post("/", (req, res) => {
                 console.error(err);
                 return res.status(500).send("An error occurred while writing the file.");
             }
-            res.redirect("/guestbook");
+            res.send("New entry added to the guestbook.");
         });
     });
-
 });
 
 module.exports = router;
