@@ -36,9 +36,10 @@ router.post("/", (req, res) => {
                 console.error(err);
                 return res.status(500).send("An error occurred while writing the file.");
             }
-            res.send("New entry added to the guestbook.");
+            res.redirect("/guestbook");
         });
     });
+
 });
 
 module.exports = router;
