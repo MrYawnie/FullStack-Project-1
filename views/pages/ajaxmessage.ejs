@@ -1,7 +1,7 @@
 <%- include('../partials/header') %> <!-- Include header partial -->
 
     <div class="container">
-        <h1>Add guestbook entry (AJAX)</h1>
+        <h1 class="d-flex justify-content-center">Add guestbook entry (AJAX)</h1>
         <%- include('../partials/form') %>
 
         <%- include('../partials/guestbooktable') %>
@@ -21,6 +21,11 @@
                 country: document.querySelector('select[name="country"]').value,
                 message: document.querySelector('textarea[name="message"]').value,
             };
+
+            if (formData.username === "" || formData.message === "" || formData.country === "") {
+                alert("Please fill in all fields");
+                return;
+            }
 
             fetch("/ajaxmessage", {
                 method: "POST",
