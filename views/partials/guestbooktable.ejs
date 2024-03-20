@@ -11,7 +11,7 @@
             <td><%= entry.id %></td>
             <td><%= entry.username %></td>
             <td><%= entry.country %></td>
-            <td><%= new Date(entry.date).toDateString() %></td>
+            <td><%= new Date(entry.date).toLocaleString('fi-FI') %></td>
             <td><%= entry.message %></td>
         </tr>
     <% }) %>
