@@ -1,11 +1,19 @@
 <%- include('../partials/header') %>
 
     <div class="container">
-        <h1 class="d-flex justify-content-center">Welcome to my Guestbook</h1>
-        <p class="d-flex justify-content-center">This is the main page of the guestbook application.</p>
-        <p class="d-flex justify-content-center">Click on the links above to navigate to the different pages.</p>
-        <img src="https://source.unsplash.com/random/600x400/?welcome" class="mt-4 mx-auto d-block" alt="Guestbook">
-        <p class="d-flex justify-content-center mt-2"><em>Just a random welcome image from Unsplash.</em></p>
+        <div class="px-4 py-5 my-5 text-center">
+            <h1><i class="bi bi-balloon-heart"></i></h1>
+            <h1 class="display-5 fw-bold text-body-emphasis">Welcome to my guestbook!</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Now that you are here, please leave a comment! I will read them all, I promise.
+                    Unless Render spins down the server, in which case the messages are not stored anywhere permanent.
+                    Heh.</p>
+                <p class="lead mb-4"><em>Anyway, enjoy a complimentary random image below, provided by
+                        Unsplash.</em></p>
+            </div>
+            <img src="https://source.unsplash.com/random/600x400/?welcome" class="mt-4 mx-auto d-block" alt="Guestbook">
+        </div>
+
     </div>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
