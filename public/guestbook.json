@@ -1,2 +1,16 @@
 [
+  {
+    "id": 1,
+    "username": "Anon",
+    "country": "Finland",
+    "date": "2024-03-24T07:31:57.320Z",
+    "message": "Wow!"
+  },
+  {
+    "id": 2,
+    "username": "Mikä anon?",
+    "country": "Finland",
+    "date": "2024-03-24T07:33:37.214Z",
+    "message": "Much wow! Käytettyjä tekniikoita on mm. Express.js, EJS ja Bootstrap."
+  }
 ]
